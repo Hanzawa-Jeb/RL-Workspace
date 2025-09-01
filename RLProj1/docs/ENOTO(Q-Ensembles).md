@@ -78,3 +78,35 @@ Online阶段
 - Q-Target计算方式使用WeightedMinPair
 - 使用SUNRISE方法进行exploration
 # 4. Experiments
+## 4.1 Locomotion Tasks
+我们使用三种dataset types
+- medium：中等级别的policy采样得到的结果
+- medium-replay：从头训练一个medium-level agent过程中遇到的所有数据。
+- medium-expert：混合了medium-level与expert-level的数据的样本
+### Comparative Evaluation
+我们的baseline如下：
+- AWAC：我们更加重点学习high advantage的那些action
+- BR: 一种o2o RL算法，训练额外的network来调整sample的优先级
+- PEX：policy set中同时有offline policy与online policy，根据其Q值通过softmax函数进行采样
+- Cal-QL：校准Q值防止过度Underestimation
+- IQL：一种offline RL算法，且online FT效果也很理想
+- SAC：一种Online RL算法
+- Scratch：SAC-N+WMP+SUNRISE直接进行online training
+![[Pasted image 20250829143603.png]]
+下面我们**根据实验分组**分别阐述我们算法的优势。
+- 对比pure online RL：初始性能良好，证明Offline Pre-training的作用
+- 对比offline RL(IQL)，我们的方法的fine-tuning速度更快，因为没有pessimism的training更适合online fine-tuning的要求。
+- 对比其他o2o RL：
+	- AWAC由数据集的质量所限制
+	- BR的性能仅次于ENOTO-CQL，但是训练不稳定
+	- PEX在online FT初始阶段有性能下滑问题
+	- Cal-QL的稳定性是非常好的
+## 4.2 Navigation Tasks
+这里使用Antmaze作为我们进行比较的项目
+![[Pasted image 20250829145653.png]]
+首先，LAPO比IQL的离线性能更好，所以会有更高的起点
+其次，IQL的asymptotic performance会因为offline constraints而更低，PEX会在一定程度上增强exploration的强度
+PEX的performance drop会更加严重
+综合来看，我们的ENOTO-LAPO方法不仅在offline stage的性能令人满意，且在online阶段同样可以维持较好的性能，不会有严重的Degradation。
+# 5. Conclusions and Limitations
+这里展现了Q-Ensembles对于缓解Unstable Training与Performance Drop是非常有帮助的，是一种更为**灵活的Constraint Method**
