@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "148d99dfd3d73869",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Offline-Boosted Actor-Critic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Offline-Boosted Actor-Critic"
-            }
-          },
-          {
             "id": "e81a5059bd87286b",
             "type": "leaf",
             "state": {
@@ -47,20 +33,6 @@
               },
               "icon": "lucide-file",
               "title": "Cal-QL"
-            }
-          },
-          {
-            "id": "e884a27351fdbd2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Offline-Boosted Actor-Critic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Offline-Boosted Actor-Critic"
             }
           },
           {
@@ -92,6 +64,20 @@
             }
           },
           {
+            "id": "e884a27351fdbd2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Efficient Online RL with Offline Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Efficient Online RL with Offline Data"
+            }
+          },
+          {
             "id": "e181ae1eaccd8176",
             "type": "leaf",
             "state": {
@@ -120,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -269,10 +255,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e181ae1eaccd8176",
+  "active": "e884a27351fdbd2e",
   "lastOpenFiles": [
-    "Efficient Online RL with Offline Data.md",
+    "Pasted image 20250902195316.png",
+    "Pasted image 20250902195250.png",
     "Efficient Online RL FT need not retain offline data.md",
+    "Offline-Boosted Actor-Critic.md",
+    "Efficient Online RL with Offline Data.md",
     "Pasted image 20250830165158.png",
     "Pasted image 20250830165149.png",
     "Pasted image 20250830165001.png",
@@ -282,13 +271,11 @@
     "Pasted image 20250830164208.png",
     "Pasted image 20250830162920.png",
     "Pasted image 20250830155845.png",
-    "Pasted image 20250830155306.png",
     "MOORe.md",
     "Cal-QL.md",
     "Folder",
     "未命名.base",
     "ENOTO(Q-Ensembles).md",
-    "Offline-Boosted Actor-Critic.md",
     "Policy Expansion.md",
     "About Plasticity.md"
   ]
